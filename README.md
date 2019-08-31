@@ -17,4 +17,8 @@ bundle install
 - Now the program will be running. Then enter the following commands to create and interact with your canvas:
 
 ## My Approach
+When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. 
+
 - Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor file to run the program from.
+
+- Next
