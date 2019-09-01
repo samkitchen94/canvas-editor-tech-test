@@ -16,9 +16,21 @@ ruby bitmap-editor.rb
 ```
 - Now the program will be running. Then enter the following commands to create and interact with your canvas:
 
+
+## User Stories
+```
+- As a user, I would like to initialise a blank canvas
+- As a user, I would like to be able to see my canvas
+- 
+```
+
 ## My Approach
-When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken.
+When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. Firstly I mapped out some user stories as seen above. Then I designed my app in terms of what classes and methods I would need, and implemented them in the sequence below.
 
-- Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor file to run the program from.
+- Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor.rb file to run the program from.
 
-- Next
+- Next I have chosen to create a method within the canvas class that will draw a new blank canvas, made up of m amount of n length arrays.
+
+- Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal.
+
+-
