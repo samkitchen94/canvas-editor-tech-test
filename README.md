@@ -26,7 +26,11 @@ ruby bitmap-editor.rb
 ```
 
 ## My Approach
-When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. Firstly I mapped out some user stories as seen above. Then I designed my app in terms of what classes and methods I would need, and implemented them in the sequence below. I also noted down all of the possible edge case scenarios that needed to be implemented, these can be seen below.
+When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. Firstly I mapped out some user stories as seen above. Then I designed my app in terms of what classes and methods I would need, and implemented them in the sequence below.
+
+I have decided to use a Canvas class the holds all methods related to manipulating and generating the canvas, and then methods relating to the program itself (such as running the program, selecting what to do with each user input, and error messages) within the CanvasEditor class.
+
+I also noted down all of the possible edge case scenarios that needed to be implemented, these can be seen below.
 
 - Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor.rb file to run the program from.
 
@@ -34,7 +38,7 @@ When taking on this challenge I have tried to break it down into smaller steps, 
 
 - Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal.
 
--
+- Next I have decided to focus on colouring in one specific pixel. This will be test driven.
 
 ## Edge cases to be considered
-- 
+- User cannot build a canvas larger than 250 or smaller than 1.
