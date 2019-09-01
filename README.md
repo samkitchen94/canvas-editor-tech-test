@@ -21,11 +21,12 @@ ruby bitmap-editor.rb
 ```
 - As a user, I would like to initialise a blank canvas
 - As a user, I would like to be able to see my canvas
-- 
+- As a user, I would like to change the colour of a specific coordinate on my canvas
+
 ```
 
 ## My Approach
-When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. Firstly I mapped out some user stories as seen above. Then I designed my app in terms of what classes and methods I would need, and implemented them in the sequence below.
+When taking on this challenge I have tried to break it down into smaller steps, these can be seen below. I have tried to consider all edge cases for this, they will be below the steps I have taken. Firstly I mapped out some user stories as seen above. Then I designed my app in terms of what classes and methods I would need, and implemented them in the sequence below. I also noted down all of the possible edge case scenarios that needed to be implemented, these can be seen below.
 
 - Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor.rb file to run the program from.
 
@@ -34,3 +35,6 @@ When taking on this challenge I have tried to break it down into smaller steps, 
 - Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal.
 
 -
+
+## Edge cases to be considered
+- 
