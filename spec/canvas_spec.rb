@@ -13,5 +13,9 @@ describe Canvas do
       canvas.draw(2, 4)
       expect(canvas.canvas).to eq([["O", "O", "O", "O"], ["O", "O", "O", "O"]])
     end
+    it "shows a blank canvas in the terminal when the program is running" do
+      canvas.draw(2, 4)
+      expect { canvas.show }.to output("OOOO\nOOOO\n").to_stdout
+    end
   end
 end

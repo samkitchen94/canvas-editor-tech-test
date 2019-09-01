@@ -10,6 +10,6 @@ class Canvas
   end
 
   def show
-    @canvas.map{|row| puts row.join(" ")}
+    @canvas.map{|row| puts row.join("")}
   end
 end
