@@ -6,7 +6,11 @@ class Canvas
   end
 
   def draw(m, n)
+    if n > 250 || m > 250
+      puts "Invalid input - enter ? to see help screen"
+    else
     @canvas = Array.new(m) { Array.new(n, 'O') }
+  end
   end
 
   def show
@@ -34,13 +38,18 @@ class Canvas
   end
 
   def scale(percentage)
-    scale_factor = percentage.to_i / 100
+    scaling = percentage.to_i / 100
     duplicate = @canvas.dup
-    @canvas.map! { |row| row * scale_factor }
-    slice_size = (duplicate.size).ceil
-    groups = duplicate.each_slice(slice_size).to_a
-
-    scale_factor.times { @canvas.push(groups) }
+    if scaling >= 1
+      @canvas.map! { |row| row * scaling }
+      slice_size = (duplicate.size).ceil
+      groups = duplicate.each_slice(slice_size).to_a
+      scaling.times { @canvas.push(groups) }
+    else
+      (scaling * @canvas.length).times do
+        @canvas.map! { |row| row.shift }
+      end
+    end
   end
 
 end

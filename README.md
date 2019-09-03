@@ -54,7 +54,10 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - The choose_selection method is getting a bit messy - time to change it to a case statement from a big if/else statement.
 
-- Next I will focus on the scale feature
+- Next I will focus on the scale feature. I have added a scale up feature but it will duplicate all the coloured in pixels - not sure of a way around this.
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
+
+## Things I have been unable to add in
+- I have struggled to test the help menu - I could copy the entire output into the tests and say "expect { canvas_editor.choose_selection("?") }.to output.." but this seems unnecessary - and I'm unable to use the rspec matcher include.

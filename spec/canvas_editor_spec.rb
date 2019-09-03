@@ -11,12 +11,6 @@ describe CanvasEditor do
     end
   end
 
-  context "help menu" do
-    it "shows the help menu when user chooses ?" do
-      expect { canvas_editor.choose_selection("?") }.to output("This is the help menu\n").to_stdout
-    end
-  end
-
   context "editing the canvas" do
     it "changes a specific pixel in the canvas with the letter chosen" do
       canvas_editor.choose_selection("L 2 2 C")
@@ -41,6 +35,17 @@ describe CanvasEditor do
     it "increases the size of the canvas by given percentage" do
       canvas_editor.choose_selection("W 200")
       expect { canvas_editor.choose_selection("S") }.to output("OOOOOOOO\nOOOOOOOO\nOOOOOOOO\nOOOOOOOO\n").to_stdout
+    end
+    # it "decreases the size of the canvas by given percentage" do
+    #   canvas_editor.choose_selection("I 4 4")
+    #   canvas_editor.choose_selection("W 50")
+    #   expect { canvas_editor.choose_selection("S") }.to output("OO\nOO\n").to_stdout
+    # end
+  end
+
+  context "error messages" do
+    it "gives an error when user enters number above 250" do
+      expect { canvas_editor.choose_selection("I 251 40") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
     end
   end
 end
