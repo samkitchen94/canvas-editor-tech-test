@@ -22,5 +22,12 @@ describe CanvasEditor do
       canvas_editor.choose_selection("L 2 2 C")
       expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOCOO\n").to_stdout
     end
+    it "clears the canvas back to white" do
+      canvas_editor.choose_selection("L 2 2 C")
+      canvas_editor.choose_selection("C")
+      expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOOOO\n").to_stdout
+    end
   end
+
+
 end

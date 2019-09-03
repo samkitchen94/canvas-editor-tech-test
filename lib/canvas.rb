@@ -17,4 +17,10 @@ class Canvas
     @canvas[row - 1][column - 1] = letter
   end
 
+  def clear_canvas
+    @canvas.each do |row|
+      row.map! { "O" }
+    end
+  end
+
 end

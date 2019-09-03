@@ -22,6 +22,7 @@ ruby bitmap-editor.rb
 - As a user, I would like to initialise a blank canvas
 - As a user, I would like to be able to see my canvas
 - As a user, I would like to change the colour of a specific coordinate on my canvas
+- As a user, I would like to clear my canvas so it is blank
 
 ```
 
@@ -31,6 +32,8 @@ When taking on this challenge I have tried to break it down into smaller steps, 
 I have decided to use a Canvas class the holds all methods related to manipulating and generating the canvas, and then methods relating to the program itself (such as running the program, selecting what to do with each user input, and error messages) within the CanvasEditor class.
 
 I also noted down all of the possible edge case scenarios that needed to be implemented, these can be seen below.
+
+I'm unsure where to keep a lot of the tests, I have decided to keep the majority of them so they are testing the CanvasEditor class as this tests the entire program as opposed to just the method called on the Canvas class.
 
 - Firstly initialize the project - readme, initialize git, lib and spec folders, gemfile (with all dependencies added in), and bitmap-editor.rb file to run the program from.
 
@@ -42,7 +45,7 @@ I also noted down all of the possible edge case scenarios that needed to be impl
 
 - Next I have implemented the help menu - this still needs filling out properly but the functionality works.
 
-- Next I have decided to focus on colouring in one specific pixel. This will be test driven.
+- Next I have decided to focus on colouring in one specific pixel.
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.

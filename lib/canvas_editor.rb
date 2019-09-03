@@ -17,6 +17,7 @@ class CanvasEditor
 
   def choose_selection(input)
     help_menu if input == "?"
+    @editor.clear_canvas if input == "C"
     selections = input.split(" ")
       if input[0] == "I"
         @editor.draw(selections[1].to_i, selections[2].to_i)
