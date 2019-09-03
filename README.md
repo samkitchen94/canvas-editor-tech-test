@@ -23,7 +23,8 @@ ruby bitmap-editor.rb
 - As a user, I would like to be able to see my canvas
 - As a user, I would like to change the colour of a specific coordinate on my canvas
 - As a user, I would like to clear my canvas so it is blank
-
+- As a user, I would like to colour in a specific part of a row on my canvas
+- As a user, I would like to colour in a specific part of a column on my canvas
 ```
 
 ## My Approach
@@ -50,6 +51,8 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 - And now, clearing the canvas so it is blank. This is just replacing everything in @canvas with an "O".
 
 - Next colouring in specific rows and columns between specific rows (inclusive). I'm getting a warning that the flip flop operator is depreciated but I think this is the most succinct way to implement this feature. Colouring horizontal sections was a little trickier - here I had to create an array of numbers between X1 & X2 (inclusive) and then use the colour_specific_pixel method on each pixel position in the array.
+
+- The choose_selection method is getting a bit messy - time to change it to a case statement from a big if/else statement.
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
