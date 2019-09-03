@@ -19,6 +19,7 @@ class CanvasEditor
     help_menu if input == "?"
     @editor.clear_canvas if input == "C"
     selections = input.split(" ")
+    puts "Capital letters only please" if selections[0] == selections[0].downcase
     case input.split(" ")[0]
     when "I"
       @editor.draw(selections[1].to_i, selections[2].to_i)

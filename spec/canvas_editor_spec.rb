@@ -44,8 +44,18 @@ describe CanvasEditor do
   end
 
   context "error messages" do
-    it "gives an error when user enters number above 250" do
+    it "gives an error when user enters canvas above 250" do
       expect { canvas_editor.choose_selection("I 251 40") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
+    end
+    it "gives an error when user enters canvas size below 1" do
+      expect { canvas_editor.choose_selection("I 251 40") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
+    end
+    it "gives an error when user tries to clear a non existent canvas" do
+      new_canvas = CanvasEditor.new
+      expect { new_canvas.choose_selection("C") }.to output("No canvas has been created\n").to_stdout
+    end
+    it "gives an error when user does not use capital letters" do
+      expect { canvas_editor.choose_selection("i 251 40") }.to output("Capital letters only please\n").to_stdout
     end
   end
 end

@@ -58,6 +58,8 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
+- User cannot clear a canvas if one hasn't been created.
+
 
 ## Things I have been unable to add in
 - I have struggled to test the help menu - I could copy the entire output into the tests and say "expect { canvas_editor.choose_selection("?") }.to output.." but this seems unnecessary - and I'm unable to use the rspec matcher include.

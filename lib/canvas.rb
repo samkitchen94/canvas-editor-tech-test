@@ -3,14 +3,13 @@ class Canvas
 
   def initialize
     @canvas = nil
+    @error_message = "Invalid input - enter ? to see help screen"
   end
 
   def draw(m, n)
-    if n > 250 || m > 250
-      puts "Invalid input - enter ? to see help screen"
-    else
+    puts @error_message if n > 250 || m > 250 || n < 1 || m < 1
     @canvas = Array.new(m) { Array.new(n, 'O') }
-  end
+
   end
 
   def show
@@ -22,8 +21,12 @@ class Canvas
   end
 
   def clear_canvas
-    @canvas.each do |row|
-      row.map! { "O" }
+    if @canvas.nil?
+      puts "No canvas has been created"
+    else
+      @canvas.each do |row|
+        row.map! { "O" }
+      end
     end
   end
 
