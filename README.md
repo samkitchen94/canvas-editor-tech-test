@@ -49,7 +49,7 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - And now, clearing the canvas so it is blank. This is just replacing everything in @canvas with an "O".
 
-- Next colouring in specific rows and columns between specific rows (inclusive). 
+- Next colouring in specific rows and columns between specific rows (inclusive). I'm getting a warning that the flip flop operator is depreciated but I think this is the most succinct way to implement this feature. Colouring horizontal sections was a little trickier - here I had to create an array of numbers between X1 & X2 (inclusive) and then use the colour_specific_pixel method on each pixel position in the array.
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.

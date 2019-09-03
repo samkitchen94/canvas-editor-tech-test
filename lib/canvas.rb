@@ -25,8 +25,12 @@ class Canvas
 
   def colour_vertical_section(column, row1, row2, letter)
     @canvas.each do |row|
-      row[column - 1] = letter if @canvas[row1]..@canvas[row2]
+      row[column - 1] = letter if @canvas[row1-1]..@canvas[row2-1]
     end
   end
 
+  def colour_horizontal_section(column1, column2, row, letter)
+    arr = column1..column2
+    arr.each { |p| colour_specific_pixel(p, row, letter) }
+  end
 end
