@@ -40,7 +40,7 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - Next I have chosen to create a method within the canvas class that will draw a new blank canvas, made up of m amount of n length arrays.
 
-- Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal.
+- Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal. All this does is joins each array together and puts them one after the other.
 
 - Next I have implemented how to close the program with command "X" - this is easy to implement but harder to test.
 
@@ -53,6 +53,8 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 - Next colouring in specific rows and columns between specific rows (inclusive). I'm getting a warning that the flip flop operator is depreciated but I think this is the most succinct way to implement this feature. Colouring horizontal sections was a little trickier - here I had to create an array of numbers between X1 & X2 (inclusive) and then use the colour_specific_pixel method on each pixel position in the array.
 
 - The choose_selection method is getting a bit messy - time to change it to a case statement from a big if/else statement.
+
+- Next I will focus on the scale feature
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.

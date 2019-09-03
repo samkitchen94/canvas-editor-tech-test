@@ -32,4 +32,15 @@ class Canvas
     arr = column1..column2
     arr.each { |p| colour_specific_pixel(p, row, letter) }
   end
+
+  def scale(percentage)
+    scale_factor = percentage.to_i / 100
+    duplicate = @canvas.dup
+    @canvas.map! { |row| row * scale_factor }
+    slice_size = (duplicate.size).ceil
+    groups = duplicate.each_slice(slice_size).to_a
+
+    scale_factor.times { @canvas.push(groups) }
+  end
+
 end

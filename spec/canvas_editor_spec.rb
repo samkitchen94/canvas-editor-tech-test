@@ -36,4 +36,11 @@ describe CanvasEditor do
       expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOCCO\n").to_stdout
     end
   end
+
+  context "scaling the canvas" do
+    it "increases the size of the canvas by given percentage" do
+      canvas_editor.choose_selection("W 200")
+      expect { canvas_editor.choose_selection("S") }.to output("OOOOOOOO\nOOOOOOOO\nOOOOOOOO\nOOOOOOOO\n").to_stdout
+    end
+  end
 end

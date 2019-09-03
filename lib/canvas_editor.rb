@@ -30,6 +30,10 @@ class CanvasEditor
       @editor.colour_vertical_section(selections[1].to_i, selections[2].to_i, selections[3].to_i, selections[4])
     when "H"
       @editor.colour_horizontal_section(selections[1].to_i, selections[2].to_i, selections[3].to_i, selections[4])
+    when "F"
+      @editor.fill(selections[1].to_i, selections[2].to_i, selections[3].to_i)
+    when "W"
+      @editor.scale(selections[1].to_i)
     end
   end
 
