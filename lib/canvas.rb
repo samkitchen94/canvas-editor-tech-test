@@ -25,9 +25,7 @@ class Canvas
 
   def colour_vertical_section(column, row1, row2, letter)
     @canvas.each do |row|
-      if @canvas[row1]..@canvas[row2]
-        row[column - 1] = letter
-      end
+      row[column - 1] = letter if @canvas[row1]..@canvas[row2]
     end
   end
 
