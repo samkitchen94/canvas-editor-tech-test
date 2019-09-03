@@ -36,7 +36,4 @@ describe CanvasEditor do
       expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOCCO\n").to_stdout
     end
   end
-
-
-
 end

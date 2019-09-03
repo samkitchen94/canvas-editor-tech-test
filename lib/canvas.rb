@@ -24,9 +24,8 @@ class Canvas
   end
 
   def colour_vertical_section(column, row1, row2, letter)
-    @canvas.each do |row|
-      row[column - 1] = letter if @canvas[row1-1]..@canvas[row2-1]
-    end
+    arr = row1..row2
+    arr.each { |p| colour_specific_pixel(column, p, letter) }
   end
 
   def colour_horizontal_section(column1, column2, row, letter)
