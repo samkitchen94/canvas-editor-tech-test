@@ -54,11 +54,14 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - The choose_selection method is getting a bit messy - time to change it to a case statement from a big if/else statement.
 
-- Next I will focus on the scale feature. I have added a scale up feature but it will duplicate all the coloured in pixels - not sure of a way around this.
+- Next I have focused on the scale feature. I have added a scale up feature but it will duplicate all the coloured in pixels - not sure of a way around this.
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
 - User cannot clear a canvas if one hasn't been created.
+- User cannot use lowercase commands.
+- Errors for incorrect format eg using letters when numbers should be used and vice versa.
+- Error for when user tries to colour in coordinates for the canvas that don't exist. 
 
 
 ## Things I have been unable to add in
