@@ -22,7 +22,7 @@ describe Canvas do
 
   context "it colours in x, y pixel with colour C" do
     it "colours in the specified pixel" do
-
+      
     end
   end
 

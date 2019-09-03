@@ -38,6 +38,10 @@ I also noted down all of the possible edge case scenarios that needed to be impl
 
 - Then I have added a show method to show the current canvas and a test to make sure this outputs the correct format in the terminal.
 
+- Next I have implemented how to close the program with command "X" - this is easy to implement but harder to test.
+
+- Next I have implemented the help menu - this still needs filling out properly but the functionality works.
+
 - Next I have decided to focus on colouring in one specific pixel. This will be test driven.
 
 ## Edge cases to be considered

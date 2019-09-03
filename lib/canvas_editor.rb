@@ -3,23 +3,30 @@ require_relative './canvas'
 class CanvasEditor
   attr_reader :editor
 
-  def initialize(editor = Canvas.new)
-    @editor = editor
+  def initialize
+    @editor = Canvas.new
   end
 
   def run
     while true do
       input = gets.chomp
       choose_selection(input)
+      break if input == "X"
     end
   end
 
   def choose_selection(input)
+    help_menu if input == "?"
     selections = input.split(" ")
       if input[0] == "I"
         @editor.draw(selections[1].to_i, selections[2].to_i)
       elsif input[0] == "S"
         @editor.show
       end
+  end
+
+  private
+  def help_menu
+    puts "This is the help menu"
   end
 end
