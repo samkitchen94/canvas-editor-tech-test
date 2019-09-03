@@ -19,11 +19,4 @@ describe Canvas do
       expect { canvas.show }.to output("OOOO\nOOOO\n").to_stdout
     end
   end
-
-  context "it colours in x, y pixel with colour C" do
-    it "colours in the specified pixel" do
-      
-    end
-  end
-
 end

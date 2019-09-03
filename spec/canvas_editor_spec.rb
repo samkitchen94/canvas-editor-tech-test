@@ -20,7 +20,7 @@ describe CanvasEditor do
   context "editing the canvas" do
     it "changes a specific pixel in the canvas with the letter chosen" do
       canvas_editor.choose_selection("L 2 2 C")
-      expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOOOO\n").to_stdout
+      expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOCOO\n").to_stdout
     end
   end
 end

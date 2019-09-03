@@ -12,4 +12,9 @@ class Canvas
   def show
     @canvas.map{|row| puts row.join("")}
   end
+
+  def colour_specific_pixel(column, row, letter)
+    @canvas[row - 1][column - 1] = letter
+  end
+
 end

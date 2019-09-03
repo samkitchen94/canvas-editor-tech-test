@@ -22,6 +22,8 @@ class CanvasEditor
         @editor.draw(selections[1].to_i, selections[2].to_i)
       elsif input[0] == "S"
         @editor.show
+      elsif input[0] == "L"
+        @editor.colour_specific_pixel(selections[1].to_i, selections[2].to_i, selections[3])
       end
   end
 
