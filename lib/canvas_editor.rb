@@ -25,6 +25,8 @@ class CanvasEditor
         @editor.show
       elsif input[0] == "L"
         @editor.colour_specific_pixel(selections[1].to_i, selections[2].to_i, selections[3])
+      elsif input[0] == "V"
+        @editor.colour_vertical_section(selections[1].to_i, selections[2].to_i, selections[3].to_i, selections[4])
       end
   end
 

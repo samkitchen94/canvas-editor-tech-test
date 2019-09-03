@@ -43,9 +43,13 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - Next I have implemented how to close the program with command "X" - this is easy to implement but harder to test.
 
-- Next I have implemented the help menu - this still needs filling out properly but the functionality works.
+- Next I have implemented the help menu - this still needs filling out properly but the functionality works. The help_menu method is private as it only needs to be called internally.
 
 - Next I have decided to focus on colouring in one specific pixel.
+
+- And now, clearing the canvas so it is blank. This is just replacing everything in @canvas with an "O".
+
+- Next colouring in specific rows and columns between specific rows (inclusive). 
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.

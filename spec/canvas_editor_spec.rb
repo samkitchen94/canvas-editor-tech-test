@@ -27,7 +27,12 @@ describe CanvasEditor do
       canvas_editor.choose_selection("C")
       expect { canvas_editor.choose_selection("S") }.to output("OOOO\nOOOO\n").to_stdout
     end
+    it "colours in a vertical section of colour between 2 rows in the canvas" do
+      canvas_editor.choose_selection("V 2 1 2 C")
+      expect { canvas_editor.choose_selection("S") }.to output("OCOO\nOCOO\n").to_stdout
+    end
   end
+
 
 
 end
