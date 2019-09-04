@@ -1,5 +1,7 @@
 # Canvas Editor
-This is a basic command line program designed to simulate a basic canvas editor. The tech stack I have chosen for this is ruby and rspec for testing. Below I will detail instructions for use and my approach when solving this task. I have chosen to follow a TDD approach for this.
+This is a basic command line program designed to simulate a basic canvas editor. The tech stack I have chosen for this is ruby and rspec for testing. Below I will detail instructions for use and my approach when solving this task.
+
+I have tried to keep my code as clean as possible, well tested and have tried to keep all methods as short as possible and following the Single Responsibility Principle. All methods that aren't accessed externally have been made private. The 'My Approach' section details my though process and overall plan for this challenge in more detail.
 
 ## Instructions for use
 - First, in your command line run:
@@ -15,16 +17,35 @@ bundle install
 ruby bitmap-editor.rb
 ```
 - Now the program will be running. Then enter the following commands to create and interact with your canvas:
-
-
+```
+I M N
+Create a new M x N canvas with all pixels coloured white (O).
+C
+Clears the canvas, setting all pixels to white (O).
+L X Y C
+Colours the pixel (X,Y) with colour C.
+V X Y1 Y2 C
+Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
+H X1 X2 Y C
+Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
+W F
+Scales the canvas with the given factor F (in percentage). (note that this feature is only working for scaling up the canvas, not down.)
+```
 ## User Stories
 ```
-- As a user, I would like to initialise a blank canvas
-- As a user, I would like to be able to see my canvas
-- As a user, I would like to change the colour of a specific coordinate on my canvas
-- As a user, I would like to clear my canvas so it is blank
-- As a user, I would like to colour in a specific part of a row on my canvas
-- As a user, I would like to colour in a specific part of a column on my canvas
+As a user, I would like to initialise a blank canvas
+As a user, I would like to be able to see my canvas
+As a user, I would like to change the colour of a specific coordinate on my canvas
+As a user, I would like to clear my canvas so it is blank
+As a user, I would like to colour in a specific part of a row on my canvas
+As a user, I would like to colour in a specific part of a column on my canvas
+```
+
+The above user stories are the ones I successfully implemented. I was unable to implement the following due to time constraints:
+```
+As a user, I would like to scale up my canvas by a certain percentage
+As a user, I would like to scale down my canvas by a certain percentage
+As a user, I would like to fill certain regions in my canvas with another colour
 ```
 
 ## My Approach
@@ -56,13 +77,21 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - Next I have focused on the scale feature. I have added a scale up feature but it will duplicate all the coloured in pixels - not sure of a way around this.
 
+- Attempted to add the reamining features but unable to due to time constraints - please see the section below for details on my though process for these and what I would have done had I had more time.
+
+- Finally, I have tried to cover error messages for edge cases - trying to keep refactoring the app as well as I go so that everything still follows the SRP. 
+
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
 - User cannot clear a canvas if one hasn't been created.
 - User cannot use lowercase commands.
 - Errors for incorrect format eg using letters when numbers should be used and vice versa.
-- Error for when user tries to colour in coordinates for the canvas that don't exist. 
+- Error for when user tries to colour in coordinates for the canvas that don't exist.
 
 
 ## Things I have been unable to add in
 - I have struggled to test the help menu - I could copy the entire output into the tests and say "expect { canvas_editor.choose_selection("?") }.to output.." but this seems unnecessary - and I'm unable to use the rspec matcher include.
+
+- I have been unable to add the fill functionality to this app. If I had more time I would have looked into recursion more to solve this as this is key to making sure that the method fills in the other pixels around it. I understand that the method should run itself with the pixels before and after it, but I have been unable to do this due to time constraints.
+
+- I have been unable to add a scale down feature for if the user enters a percentage less than 100 due to time constraints.

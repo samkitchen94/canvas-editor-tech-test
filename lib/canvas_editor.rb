@@ -19,7 +19,7 @@ class CanvasEditor
     help_menu if input == "?"
     @editor.clear_canvas if input == "C"
     selections = input.split(" ")
-    puts "Capital letters only please" if selections[0] == selections[0].downcase
+    caps_error_message if downcase?(selections)
     case input.split(" ")[0]
     when "I"
       @editor.draw(selections[1].to_i, selections[2].to_i)
@@ -28,6 +28,7 @@ class CanvasEditor
     when "L"
       @editor.colour_specific_pixel(selections[1].to_i, selections[2].to_i, selections[3])
     when "V"
+      invalid_command if selections.length < 5
       @editor.colour_vertical_section(selections[1].to_i, selections[2].to_i, selections[3].to_i, selections[4])
     when "H"
       @editor.colour_horizontal_section(selections[1].to_i, selections[2].to_i, selections[3].to_i, selections[4])
@@ -39,6 +40,18 @@ class CanvasEditor
   end
 
   private
+  def downcase?(selections)
+    selections[0] == selections[0].downcase
+  end
+
+  def invalid_command
+    puts "Invalid input - enter ? to see help screen"
+  end
+
+  def caps_error_message
+    puts "Capital letters only please"
+  end
+
   def help_menu
     puts "This is the help menu - please see a list of commands below"
     puts "I M N - Create a new M x N image with all pixels coloured white (O). Size must be between 1-250"

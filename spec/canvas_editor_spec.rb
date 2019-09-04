@@ -43,7 +43,7 @@ describe CanvasEditor do
     # end
   end
 
-  context "error messages" do
+  context "Error messages" do
     it "gives an error when user enters canvas above 250" do
       expect { canvas_editor.choose_selection("I 251 40") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
     end
@@ -56,6 +56,15 @@ describe CanvasEditor do
     end
     it "gives an error when user does not use capital letters" do
       expect { canvas_editor.choose_selection("i 251 40") }.to output("Capital letters only please\n").to_stdout
+    end
+    it "gives an error when user tries to colour in coordinate that doesn't exist" do
+      expect { canvas_editor.choose_selection("V 6 4 10 C") }.to raise_error
+    end
+    it "gives an error when user enters invalid command" do
+      expect { canvas_editor.choose_selection("V 6 C") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
+    end
+    it "gives an error when user enters invalid command" do
+      expect { canvas_editor.choose_selection("I 2") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
     end
   end
 end

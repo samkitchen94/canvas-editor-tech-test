@@ -1,5 +1,5 @@
 class Canvas
-  attr_reader :canvas
+  attr_reader :canvas, :error_message
 
   def initialize
     @canvas = nil
@@ -17,7 +17,7 @@ class Canvas
   end
 
   def colour_specific_pixel(column, row, letter)
-    @canvas[row - 1][column - 1] = letter
+      @canvas[row - 1][column - 1] = letter
   end
 
   def clear_canvas
@@ -55,4 +55,8 @@ class Canvas
     end
   end
 
+  private
+  def coordinates_not_found
+    puts "That part of the canvas doesn't exist, please colour in another"
+  end
 end
