@@ -43,16 +43,11 @@ class Canvas
   def scale(percentage)
     scaling = percentage.to_i / 100
     duplicate = @canvas.dup
-    if scaling >= 1
-      @canvas.map! { |row| row * scaling }
-      slice_size = (duplicate.size).ceil
-      groups = duplicate.each_slice(slice_size).to_a
-      scaling.times { @canvas.push(groups) }
-    else
-      (scaling * @canvas.length).times do
-        @canvas.map! { |row| row.shift }
-      end
-    end
+
+    @canvas.map! { |row| row * scaling }
+    slice_size = (duplicate.size).ceil
+    groups = duplicate.each_slice(slice_size).to_a
+    scaling.times { @canvas.push(groups) }
   end
 
   private
