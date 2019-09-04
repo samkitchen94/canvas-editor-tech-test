@@ -77,9 +77,9 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 
 - Next I have focused on the scale feature. I have added a scale up feature but it will duplicate all the coloured in pixels - not sure of a way around this.
 
-- Attempted to add the reamining features but unable to due to time constraints - please see the section below for details on my though process for these and what I would have done had I had more time.
+- Attempted to add the remaining features but unable to due to time constraints - please see the section below for details on my though process for these and what I would have done had I had more time.
 
-- Finally, I have tried to cover error messages for edge cases - trying to keep refactoring the app as well as I go so that everything still follows the SRP. 
+- Finally, I have tried to cover error messages for edge cases - trying to keep refactoring the app as well as I go so that everything still follows the SRP. This is tricky with so many different error messages but I have tried to keep it as simple and readable as possible!
 
 ## Edge cases to be considered
 - User cannot build a canvas larger than 250 or smaller than 1.
@@ -87,6 +87,7 @@ I'm unsure where to keep a lot of the tests, I have decided to keep the majority
 - User cannot use lowercase commands.
 - Errors for incorrect format eg using letters when numbers should be used and vice versa.
 - Error for when user tries to colour in coordinates for the canvas that don't exist.
+- Error for when user tries to enter a command that is too short or too long
 
 
 ## Things I have been unable to add in
