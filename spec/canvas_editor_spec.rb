@@ -66,5 +66,8 @@ describe CanvasEditor do
     it "gives an error when user enters invalid command" do
       expect { canvas_editor.choose_selection("I 2") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
     end
+    it "gives an error when user enters invalid create canvas command" do
+      expect { canvas_editor.choose_selection("S 22") }.to output("Invalid input - enter ? to see help screen\n").to_stdout
+    end
   end
 end

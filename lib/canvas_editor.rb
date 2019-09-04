@@ -24,7 +24,8 @@ class CanvasEditor
     when "I"
       @editor.draw(selections[1].to_i, selections[2].to_i)
     when "S"
-      @editor.show
+      invalid_command if selections.length > 1
+      @editor.show unless selections.length > 1
     when "L"
       @editor.colour_specific_pixel(selections[1].to_i, selections[2].to_i, selections[3])
     when "V"
