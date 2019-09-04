@@ -12,6 +12,10 @@ git clone https://github.com/samkitchen94/canvas-editor-tech-test.git
 ```
 bundle install
 ```
+- To run the tests run:
+```
+rspec
+```
 - Then navigate to this repository in your command line and run:
 ```
 ruby bitmap-editor.rb
